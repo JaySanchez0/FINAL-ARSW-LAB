@@ -104,3 +104,5 @@ La base de datos redis que se utiliza para todos los siguientes expermentos esta
 ![img](images/azure/clean200.PNG)
 
 ![img](images/azure/respn200.PNG)
+
+**Tiempo:** 2 min 24.96 seg
