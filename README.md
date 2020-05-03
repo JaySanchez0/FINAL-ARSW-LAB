@@ -38,6 +38,9 @@ Instalar dentro del directorio de la function app
     func start
 ~~~
 
+
+La base de datos redis que se utiliza para todos los siguientes expermentos esta alojada en azure
+
 ### Casos de analizis localhost
 
 *Tiempo de repuesta n=100 sin memoria*
@@ -61,3 +64,14 @@ Instalar dentro del directorio de la function app
 ![img](images/100memo.PNG)
 
 ![img](images/n200memo100.PNG)
+
+*Tiempo:* 1 min 8.58 seg
+
+*Tiempo de repuesta para n=200 sin memoria*
+
+![img](images/clearmemo.PNG)
+
+![img](images/200sinmemo.PNG)
+
+*Tiempo:* 2 min 47.58 seg
+
