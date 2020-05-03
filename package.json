@@ -8,8 +8,8 @@
   },
   "dependencies": {
     "big-integer": "^1.6.48",
-    "redis":"^3.0.2",
-    "bluebird":"^3.7.2"
+    "redis": "^3.0.2",
+    "bluebird": "^3.7.2"
   },
   "devDependencies": {}
 }
