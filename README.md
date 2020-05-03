@@ -106,3 +106,46 @@ La base de datos redis que se utiliza para todos los siguientes expermentos esta
 ![img](images/azure/respn200.PNG)
 
 **Tiempo:** 2 min 24.96 seg
+
+**Caso n=1000**
+Falla al primer intento pero logro guardar data en cache
+
+![img](images/azure/n1000fail.PNG)
+
+Guardo aproximadamente hasta n=240
+
+![img](images/azure/save1n1000.PNG)
+
+Falla al segundo intento con los valores precargados
+
+![img](images/azure/n1000fail2.PNG)
+
+Logro cargar aproximadamente hasta n=45
+
+![img](images/azure/n1000-2.PNG)
+
+El finalmente responde al tercer intento
+
+![img](images/azure/n1000-2.PNG)
+
+**Ahora vamos a poner un tiempo de expiracion n=30**
+
+![img](images/azure/expiracion.PNG)
+
+Ejecutamos newman run json.test -n 20
+
+![img](images/azure/newman.PNG)
+
+Aqui podemos evidenciar que despues de 1 min 11 seg las peticiones se ejecutaron con tiempo muy similares en milisegundos, debemos recordar que siempre el primer valor n=1 va a vencer primero que n=2 asi sucesibamente hasta n=100, en momento que vensa n=100 se va a hacer necsario recalcular todos en otras palabras para fibonacci(100) despues de 30 segundos se deberia volver a recalcular todos los fibonaccis anteriores, ahora la pregunta es efectibamente expiraron.
+
+![img](images/azure/exconsola.PNG)
+
+Efectivamente ellos murieron a los 30 segundos aunque no lo pudimos evidenciar Ahora vamos a mirar para 3 segundos en este caso nos deberia ser posible evidenciar este comportamiento
+
+![img](images/azure/exp3s.PNG)
+
+![img](images/azure/newman1.PNG)
+
+![img](images/azure/newman2.PNG)
+
+Aqui si miramos la primera y 16va iteracion podemos ver que en estas iteraciones los tiempo de carga para n=100 son de 1 minuto y es debido a que en estas iteraciones debio ser cargado de nuevo los valores de los fibonaccis anteriores hasta 100
