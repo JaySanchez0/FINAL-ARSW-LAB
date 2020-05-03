@@ -120,13 +120,15 @@ Falla al segundo intento con los valores precargados
 
 ![img](images/azure/n1000fail2.PNG)
 
-Logro cargar aproximadamente hasta n=45
+Logro cargar aproximadamente hasta n=450
 
 ![img](images/azure/n1000-2.PNG)
 
 El finalmente responde al tercer intento
 
 ![img](images/azure/n1000-2.PNG)
+
+Aqui pudimos evidenciar que entre mas pequeño sea el callback de la recursion el puede calcular mas valores dado que tuvimos 240, 210 y 500
 
 **Ahora vamos a poner un tiempo de expiracion n=30**
 
