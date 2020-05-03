@@ -1,0 +1,15 @@
+{
+  "name": "funtions",
+  "version": "1.0.0",
+  "description": "test app",
+  "scripts": {
+    "start": "func start",
+    "test": "echo \"No tests yet...\""
+  },
+  "dependencies": {
+    "big-integer": "^1.6.48",
+    "redis":"^3.0.2",
+    "bluebird":"^3.7.2"
+  },
+  "devDependencies": {}
+}
