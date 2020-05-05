@@ -40,6 +40,8 @@ Instalar dentro del directorio de la function app
     func start
 ~~~
 
+**Nota:** Entiendase los casos sin memoria como aquellos casos en que la base de datos redis no tiene datos almacenados con los cuales calcular y por lo tanto debe realizar todo el calculo y guardar en la base de datos.
+
 
 La base de datos redis que se utiliza para todos los siguientes expermentos esta alojada en azure
 
@@ -77,7 +79,7 @@ La base de datos redis que se utiliza para todos los siguientes expermentos esta
 
 *Tiempo:* 2 min 47.58 seg
 
-### Casos de analizis localhost
+### Casos de analizis Azure
 
 **Tiempo de repuesta n=100 sin memoria**
 
